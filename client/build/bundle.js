@@ -46,27 +46,32 @@
 
 	'use strict';
 	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(161);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
 	var _Game = __webpack_require__(1);
 	
 	var _Game2 = _interopRequireDefault(_Game);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var React = __webpack_require__(2);
-	var ReactDOM = __webpack_require__(159);
-	
 	window.onload = function () {
-	  ReactDOM.render(React.createElement(_Game2.default, null), document.getElementById('app'));
+	  _reactDom2.default.render(_react2.default.createElement(_Game2.default, null), document.getElementById('app'));
 	};
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -74,6 +79,14 @@
 	var _react = __webpack_require__(2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _Question = __webpack_require__(159);
+	
+	var _Question2 = _interopRequireDefault(_Question);
+	
+	var _Peeps = __webpack_require__(160);
+	
+	var _Peeps2 = _interopRequireDefault(_Peeps);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -83,143 +96,34 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	// import Grid from './../components/Grid';
-	
 	var Game = function (_React$Component) {
-	    _inherits(Game, _React$Component);
+	  _inherits(Game, _React$Component);
 	
-	    function Game() {
-	        _classCallCheck(this, Game);
+	  function Game() {
+	    _classCallCheck(this, Game);
 	
-	        return _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).apply(this, arguments));
+	  }
+	
+	  _createClass(Game, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          { id: 'game-title' },
+	          '\xAF\\_(\u30C4)_/\xAF'
+	        ),
+	        _react2.default.createElement(_Question2.default, null),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(_Peeps2.default, null)
+	      );
 	    }
+	  }]);
 	
-	    _createClass(Game, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                null,
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Guess Who"
-	                ),
-	                _react2.default.createElement(
-	                    "table",
-	                    null,
-	                    _react2.default.createElement(
-	                        "tbody",
-	                        { align: "center" },
-	                        _react2.default.createElement(
-	                            "tr",
-	                            null,
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/alex.png", alt: "alex", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/alfred.jpg", alt: "alfred", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/anita.jpg", alt: "anita", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/anne.png", alt: "anne", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/bernard.png", alt: "bernard", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/bill.jpg", alt: "bill", height: "200px" })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            "tr",
-	                            null,
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/charles.jpg", alt: "charles", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/claire.png", alt: "claire", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/david.png", alt: "david", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/Frans.png", alt: "Frans", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/geroge.jpg", alt: "geroge", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/herman.png", alt: "herman", height: "200px" })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            "tr",
-	                            null,
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/maria.png", alt: "maria", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/max.png", alt: "max", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/paul.png", alt: "paul", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/richard.jpg", alt: "richard", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/susan.png", alt: "susan", height: "200px" })
-	                            ),
-	                            _react2.default.createElement(
-	                                "th",
-	                                null,
-	                                _react2.default.createElement("img", { src: "images/tom.png", alt: "tom", height: "200px" })
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Game;
+	  return Game;
 	}(_react2.default.Component);
 	
 	exports.default = Game;
@@ -19911,6 +19815,265 @@
 
 /***/ },
 /* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Question = function (_React$Component) {
+	  _inherits(Question, _React$Component);
+	
+	  function Question() {
+	    _classCallCheck(this, Question);
+	
+	    return _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).apply(this, arguments));
+	  }
+	
+	  _createClass(Question, [{
+	    key: "QuestionDropdown",
+	    value: function QuestionDropdown() {
+	      var options = this.props.questions.map(function (question, index) {
+	        return _react2.default.createElement(
+	          "option",
+	          { key: index, value: index },
+	          question
+	        );
+	      });
+	      return options;
+	    }
+	  }, {
+	    key: "handleSelect",
+	    value: function handleSelect(e) {
+	      var index = e.target.value;
+	      this.props.selectedQuestion(index);
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "select",
+	          { className: "question-dropdown", onChange: this.handleSelect },
+	          _react2.default.createElement(
+	            "option",
+	            { selected: "true", disabled: "disabled" },
+	            "Select a Question"
+	          ),
+	          _react2.default.createElement(
+	            "option",
+	            { onClick: this.handleSelect },
+	            " Is it male or female? "
+	          ),
+	          _react2.default.createElement(
+	            "option",
+	            { onClick: this.handleSelect },
+	            " Are they wearing glasses? "
+	          ),
+	          _react2.default.createElement(
+	            "option",
+	            { onClick: this.handleSelect },
+	            " Do they have dark hair? "
+	          ),
+	          _react2.default.createElement(
+	            "option",
+	            { onClick: this.handleSelect },
+	            " Are they wearing a hat? "
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Question;
+	}(_react2.default.Component);
+	
+	exports.default = Question;
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Peeps = function (_React$Component) {
+	  _inherits(Peeps, _React$Component);
+	
+	  function Peeps() {
+	    _classCallCheck(this, Peeps);
+	
+	    return _possibleConstructorReturn(this, (Peeps.__proto__ || Object.getPrototypeOf(Peeps)).apply(this, arguments));
+	  }
+	
+	  _createClass(Peeps, [{
+	    key: "handleClick",
+	    value: function handleClick() {
+	      var setDiscarded = !this.state.discarded;
+	      this.setState({ discarded: setDiscarded });
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "table",
+	          null,
+	          _react2.default.createElement(
+	            "tbody",
+	            null,
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { id: "character", src: "images/alex.png", alt: "alex", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/alfred.png", alt: "alfred", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/anita.png", alt: "anita", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/anne.png", alt: "anne", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/bernard.png", alt: "bernard", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/bill.png", alt: "bill", height: "200px", onClick: this.handleClick })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/claire.png", alt: "claire", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/david.png", alt: "david", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/eric.png", alt: "eric", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/george.png", alt: "geroge", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/herman.png", alt: "herman", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/maria.png", alt: "maria", height: "200px", onClick: this.handleClick })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/max.png", alt: "max", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/paul.png", alt: "paul", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/philip.png", alt: "philip", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/richard.png", alt: "richard", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/susan.png", alt: "susan", height: "200px", onClick: this.handleClick })
+	              ),
+	              _react2.default.createElement(
+	                "th",
+	                null,
+	                _react2.default.createElement("img", { src: "images/tom.png", alt: "tom", height: "200px", onClick: this.handleClick })
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Peeps;
+	}(_react2.default.Component);
+	
+	exports.default = Peeps;
+
+/***/ },
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
